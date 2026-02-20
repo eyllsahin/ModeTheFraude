@@ -112,20 +112,6 @@
     <p class="fg-footer-sub">Developed by <strong>Q-Line Solutions</strong></p>
   </footer>
 
-  <script>
-    const loadingScreen = document.getElementById('loadingScreen');
-    const loadingGif = document.getElementById('loadingGif');
-    const gifDuration = 3000;
-    function hideLoadingScreen() {
-      if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
-        loadingScreen.classList.add('hidden');
-      }
-    }
-    setTimeout(hideLoadingScreen, gifDuration);
-    window.addEventListener('load', function() { setTimeout(hideLoadingScreen, 500); });
-    setTimeout(hideLoadingScreen, 5000);
-    if (loadingGif) { loadingGif.onerror = hideLoadingScreen; }
-  </script>
   <script src="teklif.js"></script>
   <!-- Enhanced JavaScript -->
   <script src="enhanced.js"></script>

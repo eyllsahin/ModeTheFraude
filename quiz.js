@@ -217,11 +217,6 @@ function sonuclariGoster() {
   ekranGoster(resultScreen);
 }
 
-// Sınavı yeniden başlat
-function sinaviYenidenBaslat() {
-  sinaviBaslat();
-}
-
 // Ana sayfaya dön
 function anaSayfayaDon() {
   window.location.href = 'index.html';
@@ -230,7 +225,7 @@ function anaSayfayaDon() {
 // Event Listener'lar
 btnStart.addEventListener('click', sinaviBaslat);
 btnNext.addEventListener('click', sonrakiSoru);
-btnRestart.addEventListener('click', sinaviYenidenBaslat);
+btnRestart.addEventListener('click', sinaviBaslat);
 btnHome.addEventListener('click', anaSayfayaDon);
 
 // Sayfa yüklendiğinde başlangıç ekranını göster

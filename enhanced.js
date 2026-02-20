@@ -211,7 +211,6 @@ class MentalHealthWidget {
 
     init() {
         this.createWidget();
-        this.startRotation();
     }
 
     createWidget() {
@@ -278,10 +277,6 @@ class MentalHealthWidget {
             widget.style.opacity = '1';
             widget.style.visibility = 'visible';
         }, 100);
-    }
-
-    startRotation() {
-        // Remove auto-rotation, now manual only
     }
 
     nextStat() {
