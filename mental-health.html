@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruh Sağlığı Farkındalığı | The Fraude Games</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="fraude">
+
+  <!-- Neon butterflies -->
+  <div class="neon-butterflies" aria-hidden="true">
+    <span class="butterfly b1">🦋</span>
+    <span class="butterfly b3">🦋</span>
+    <span class="butterfly b5">🦋</span>
+    <span class="butterfly b8">🦋</span>
+    <span class="butterfly b13">🦋</span>
+    <span class="butterfly b17">🦋</span>
+    <span class="butterfly sparkle-fly s1">✨</span>
+    <span class="butterfly sparkle-fly s3">💫</span>
+    <span class="butterfly sparkle-fly s5">🌟</span>
+    <span class="butterfly sparkle-fly s7">✨</span>
+  </div>
+
+  <nav class="fg-navbar">
+    <a class="fg-brand" href="index.html" aria-label="The Fraude Games ana sayfa">
+      <img src="logo.svg" alt="The Fraude Games neon kelebek logosu" class="fg-logo"/>
+      <span class="fg-brand-text">The Fraude Games</span>
+    </a>
+
+    <input id="fg-menu-toggle" class="fg-menu-toggle" type="checkbox" />
+    <label for="fg-menu-toggle" class="fg-burger" aria-label="Menüyü Aç/Kapat">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="fg-navlinks">
+      <li><a href="index.html#about">Hakkımızda</a></li>
+      <li><a href="index.html#services">Hizmetler</a></li>
+      <li><a href="index.html#games">Oyunlar</a></li>
+      <li><a href="mental-health.html" class="fg-active">Ruh Sağlığı</a></li>
+      <li><a href="task2.html">Paketler</a></li>
+      <li><a href="team.html">Ekibimiz</a></li>
+      <li><a href="teklif.html">Fiyat Teklifi</a></li>
+      <li><a href="quiz.html">HR Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <header class="mental-health-hero">
+      <div class="fg-hero-inner">
+        <div class="fg-hero-text">
+          <p class="fg-kicker">Mental Health Awareness</p>
+          <h1>Karanlıkta <span>Işık</span> Olmak</h1>
+          <p class="fg-sub">
+            Psikolojik korku oyunları geliştirirken, gerçek hayattaki ruh sağlığı sorunlarının ciddiyetini asla göz ardı etmeyiz. 
+            Karanlığı sanatsal bir araç olarak kullanırken, gerçek yaşamda ışığı destekliyoruz.
+          </p>
+        </div>
+      </div>
+      <div class="fg-orb fg-orb-1" aria-hidden="true"></div>
+      <div class="fg-orb fg-orb-2" aria-hidden="true"></div>
+    </header>
+
+    <!-- Statistics Section - Page 1 -->
+    <section class="mental-health-page" id="page-1">
+      <div class="page-content">
+        <h2>Küresel Ruh Sağlığı İstatistikleri</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon-large">🧠</div>
+            <div class="stat-value-large">4'te 1</div>
+            <div class="stat-description-large">kişi yılda ruh sağlığı sorunları yaşar</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-large">💚</div>
+            <div class="stat-value-large">%90</div>
+            <div class="stat-description-large">intiharlar uygun destek ile önlenebilir</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-large">🎮</div>
+            <div class="stat-value-large">%78</div>
+            <div class="stat-description-large">oyuncular oyun oynayarak ruh sağlığı iyileşmesi bildiriyor</div>
+          </div>
+        </div>
+      </div>
+      <div class="page-navigation">
+        <span class="page-indicator">1 / 4</span>
+        <button class="page-nav-btn" onclick="goToPage(2)">Sonraki →</button>
+      </div>
+    </section>
+
+    <!-- Our Commitment Section - Page 2 -->
+    <section class="mental-health-page hidden" id="page-2">
+      <div class="page-content">
+        <h2>Bizim Taahhüdümüz</h2>
+        <div class="commitment-grid">
+          <div class="commitment-card-large">
+            <div class="commitment-icon-large">💚</div>
+            <h3>Kararlı Destek</h3>
+            <p>Karımızın <strong>%2'sini</strong> ruh sağlığı tesislerine bağışlıyoruz. Çünkü gerçek korkunun karşısında gerçek umut olmalı.</p>
+          </div>
+          <div class="commitment-card-large">
+            <div class="commitment-icon-large">🧠</div>
+            <h3>Farkındalık Yaratma</h3>
+            <p>Oyunlarımız sadece eğlendirmiyor, aynı zamanda ruh sağlığı konularında <strong>farkındalık yaratıyor</strong> ve tartışma başlatıyor.</p>
+          </div>
+          <div class="commitment-card-large">
+            <div class="commitment-icon-large">🤝</div>
+            <h3>Topluluk Desteği</h3>
+            <p>Oyuncu topluluğumuzla birlikte, <strong>daha güvenli bir gelecek</strong> inşa edebileceğimize inanıyoruz.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-navigation">
+        <button class="page-nav-btn" onclick="goToPage(1)">← Önceki</button>
+        <span class="page-indicator">2 / 4</span>
+        <button class="page-nav-btn" onclick="goToPage(3)">Sonraki →</button>
+      </div>
+    </section>
+
+    <!-- Game and Mental Health - Page 3 -->
+    <section class="mental-health-page hidden" id="page-3">
+      <div class="page-content">
+        <h2>Oyun ve Ruh Sağlığı</h2>
+        <div class="info-section">
+          <div class="info-card">
+            <h3>🎮 Oyunların Terapötik Gücü</h3>
+            <p>Araştırmalar, video oyunlarının stres, anksiyete ve depresyon belirtilerini azaltmada etkili olabileceğini gösteriyor. Doğru şekilde tasarlanmış oyunlar, oyunculara güvenli bir kaçış alanı sunabilir.</p>
+          </div>
+          <div class="info-card">
+            <h3>🌙 Korku Oyunları ve Katarsis</h3>
+            <p>Psikolojik korku oyunları, oyunculara kontrollü bir ortamda korkularıyla yüzleşme imkanı tanır. Bu "katartik" deneyim, gerçek hayattaki anksiyeteyi yönetmeye yardımcı olabilir.</p>
+          </div>
+          <div class="info-card">
+            <h3>💡 Sorumlu Tasarım</h3>
+            <p>The Fraude Games olarak, oyunlarımızı tasarlarken tetikleyici içerikler konusunda dikkatli davranıyor ve gerekli uyarıları sağlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-navigation">
+        <button class="page-nav-btn" onclick="goToPage(2)">← Önceki</button>
+        <span class="page-indicator">3 / 4</span>
+        <button class="page-nav-btn" onclick="goToPage(4)">Sonraki →</button>
+      </div>
+    </section>
+
+    <!-- Resources Section - Page 4 -->
+    <section class="mental-health-page hidden" id="page-4">
+      <div class="page-content">
+        <h2>Yardım Kaynakları</h2>
+        <div class="resources-section">
+          <div class="crisis-card">
+            <div class="crisis-icon">🆘</div>
+            <h3>Acil Durum Hatları</h3>
+            <div class="hotline-list">
+              <div class="hotline-item">
+                <span class="hotline-name">Türkiye Ruh Sağlığı Yardım Hattı</span>
+                <span class="hotline-number">182</span>
+              </div>
+              <div class="hotline-item">
+                <span class="hotline-name">İntihar Önleme Hattı</span>
+                <span class="hotline-number">182</span>
+              </div>
+              <div class="hotline-item">
+                <span class="hotline-name">Polis İmdat</span>
+                <span class="hotline-number">155</span>
+              </div>
+            </div>
+          </div>
+          <div class="message-card">
+            <div class="message-icon">🌟</div>
+            <h3>Unutma</h3>
+            <p class="hopeful-message">
+              <strong>Yalnız değilsin.</strong> İyileşme her zaman mümkün. Yardım istemek güçlülüktür, zayıflık değil.
+              Bugün zor olsa bile, yarın daha iyi olabilir.
+            </p>
+            <p class="support-message">
+              💙 The Fraude Games ailesi olarak, topluluk üyelerimizin ruh sağlığını önemsiyoruz.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="page-navigation">
+        <button class="page-nav-btn" onclick="goToPage(3)">← Önceki</button>
+        <span class="page-indicator">4 / 4</span>
+        <a href="index.html" class="page-nav-btn">Ana Sayfa →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fg-footer">
+    <p>© 2026 The Fraude Games — Psychological Horror Studio</p>
+    <p class="fg-footer-sub">Developed by <strong>Q-Line Solutions</strong></p>
+  </footer>
+
+  <script>
+    const loadingScreen = document.getElementById('loadingScreen');
+    const loadingGif = document.getElementById('loadingGif');
+    const gifDuration = 3000;
+    function hideLoadingScreen() {
+      if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+        loadingScreen.classList.add('hidden');
+      }
+    }
+    setTimeout(hideLoadingScreen, gifDuration);
+    window.addEventListener('load', function() { setTimeout(hideLoadingScreen, 500); });
+    setTimeout(hideLoadingScreen, 5000);
+    if (loadingGif) { loadingGif.onerror = hideLoadingScreen; }
+
+    function goToPage(pageNum) {
+      document.querySelectorAll('.mental-health-page').forEach(page => {
+        page.classList.add('hidden');
+      });
+      const target = document.getElementById('page-' + pageNum);
+      target.classList.remove('hidden');
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+  <script src="enhanced.js"></script>
+</body>
+</html>

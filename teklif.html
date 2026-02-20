@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiyat Teklifi - The Fraude Games</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="fraude">
+
+  <!-- Neon butterflies -->
+  <div class="neon-butterflies" aria-hidden="true">
+    <span class="butterfly b1">🦋</span>
+    <span class="butterfly b3">🦋</span>
+    <span class="butterfly b5">🦋</span>
+    <span class="butterfly b8">🦋</span>
+    <span class="butterfly b13">🦋</span>
+    <span class="butterfly b17">🦋</span>
+    <span class="butterfly sparkle-fly s1">✨</span>
+    <span class="butterfly sparkle-fly s3">💫</span>
+    <span class="butterfly sparkle-fly s5">🌟</span>
+    <span class="butterfly sparkle-fly s7">✨</span>
+  </div>
+
+  <nav class="fg-navbar">
+    <a class="fg-brand" href="index.html" aria-label="The Fraude Games ana sayfa">
+      <img src="logo.svg" alt="The Fraude Games neon kelebek logosu" class="fg-logo"/>
+      <span class="fg-brand-text">The Fraude Games</span>
+    </a>
+
+    <input id="fg-menu-toggle" class="fg-menu-toggle" type="checkbox" />
+    <label for="fg-menu-toggle" class="fg-burger" aria-label="Menüyü Aç/Kapat">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="fg-navlinks">
+      <li><a href="index.html#about">Hakkımızda</a></li>
+      <li><a href="index.html#services">Hizmetler</a></li>
+      <li><a href="index.html#games">Oyunlar</a></li>
+      <li><a href="mental-health.html">Ruh Sağlığı</a></li>
+      <li><a href="task2.html">Paketler</a></li>
+      <li><a href="team.html">Ekibimiz</a></li>
+      <li><a href="teklif.html" class="fg-active">Fiyat Teklifi</a></li>
+      <li><a href="quiz.html">HR Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="fg-section" style="padding-top: 40px;">
+      <h2>Proje Maliyet Hesaplama</h2>
+      <p style="margin-bottom: 40px;">Oyun projeleriniz için tahmini maliyet hesaplayın</p>
+
+      <div class="quote-calculator">
+        <div class="quote-form">
+          <div class="form-group">
+            <label for="sayfaSayisi">Oyun Seviye Sayısı</label>
+            <input type="number" id="sayfaSayisi" min="1" max="50" value="5" class="form-input"/>
+            <span class="form-hint">Her seviye için tasarım, kodlama ve test</span>
+          </div>
+
+          <div class="form-group">
+            <label for="hizmetTuru">Hizmet Türü</label>
+            <select id="hizmetTuru" class="form-select">
+              <option value="5000">Temel Oyun Geliştirme</option>
+              <option value="12000">Atmospheric Horror Design</option>
+              <option value="20000">Premium Psychological Horror</option>
+            </select>
+          </div>
+
+          <div class="form-group-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="sesDizayn" class="form-checkbox"/>
+              <span>Ses & Ambiyans Tasarımı (+15,000 TL)</span>
+            </label>
+          </div>
+
+          <div class="form-group-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="narrativeDesign" class="form-checkbox"/>
+              <span>Narrative Design & Story Writing (+18,000 TL)</span>
+            </label>
+          </div>
+
+          <div class="form-group-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="testOptimizasyon" class="form-checkbox"/>
+              <span>Playtest & Optimizasyon (+10,000 TL)</span>
+            </label>
+          </div>
+
+          <button id="btnHesapla" class="fg-btn fg-btn-primary" style="width: 100%; margin-top: 24px;">
+            Maliyet Hesapla
+          </button>
+        </div>
+
+        <div class="quote-result" id="quoteResult">
+          <h3>Tahmini Maliyet</h3>
+          <div class="result-amount">
+            <span class="result-currency">TL</span>
+            <span class="result-value" id="resultValue">0</span>
+          </div>
+          <p class="result-note">Bu tahmini bir fiyattır. Detaylı teklif için bizimle iletişime geçin.</p>
+          <div class="result-breakdown" id="resultBreakdown"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fg-footer">
+    <p>© 2026 The Fraude Games — Psychological Horror Studio</p>
+    <p class="fg-footer-sub">Developed by <strong>Q-Line Solutions</strong></p>
+  </footer>
+
+  <script>
+    const loadingScreen = document.getElementById('loadingScreen');
+    const loadingGif = document.getElementById('loadingGif');
+    const gifDuration = 3000;
+    function hideLoadingScreen() {
+      if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+        loadingScreen.classList.add('hidden');
+      }
+    }
+    setTimeout(hideLoadingScreen, gifDuration);
+    window.addEventListener('load', function() { setTimeout(hideLoadingScreen, 500); });
+    setTimeout(hideLoadingScreen, 5000);
+    if (loadingGif) { loadingGif.onerror = hideLoadingScreen; }
+  </script>
+  <script src="teklif.js"></script>
+  <!-- Enhanced JavaScript -->
+  <script src="enhanced.js"></script>
+</body>
+</html>

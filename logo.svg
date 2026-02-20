@@ -1,0 +1,40 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="55%" stop-color="#7b2cff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left wing -->
+  <path d="M80 34
+           C44 18, 20 44, 40 66
+           C20 78, 30 116, 66 104
+           C60 88, 62 74, 74 64
+           C76 52, 70 40, 80 34Z"
+        fill="none" stroke="url(#neon)" stroke-width="4.2" filter="url(#glow)" stroke-linecap="round"/>
+
+  <!-- Right wing -->
+  <path d="M80 34
+           C116 18, 140 44, 120 66
+           C140 78, 130 116, 94 104
+           C100 88, 98 74, 86 64
+           C84 52, 90 40, 80 34Z"
+        fill="none" stroke="url(#neon)" stroke-width="4.2" filter="url(#glow)" stroke-linecap="round"/>
+
+  <!-- Body -->
+  <path d="M80 46 C74 60, 74 86, 80 112 C86 86, 86 60, 80 46Z"
+        fill="none" stroke="url(#neon)" stroke-width="4.2" filter="url(#glow)" stroke-linecap="round"/>
+
+  <!-- Antennae -->
+  <path d="M78 44 C70 32, 58 30, 52 36" fill="none" stroke="url(#neon)" stroke-width="3.2" filter="url(#glow)" stroke-linecap="round"/>
+  <path d="M82 44 C90 32, 102 30, 108 36" fill="none" stroke="url(#neon)" stroke-width="3.2" filter="url(#glow)" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q-Line HR Assessment - Online Sınav Sistemi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="fraude">
+
+  <!-- Neon butterflies -->
+  <div class="neon-butterflies" aria-hidden="true">
+    <span class="butterfly b1">🦋</span>
+    <span class="butterfly b3">🦋</span>
+    <span class="butterfly b5">🦋</span>
+    <span class="butterfly b8">🦋</span>
+    <span class="butterfly b13">🦋</span>
+    <span class="butterfly b17">🦋</span>
+    <span class="butterfly sparkle-fly s1">✨</span>
+    <span class="butterfly sparkle-fly s3">💫</span>
+    <span class="butterfly sparkle-fly s5">🌟</span>
+    <span class="butterfly sparkle-fly s7">✨</span>
+  </div>
+
+  <nav class="fg-navbar">
+    <a class="fg-brand" href="index.html" aria-label="The Fraude Games ana sayfa">
+      <img src="logo.svg" alt="The Fraude Games neon kelebek logosu" class="fg-logo"/>
+      <span class="fg-brand-text">The Fraude Games</span>
+    </a>
+
+    <input id="fg-menu-toggle" class="fg-menu-toggle" type="checkbox" />
+    <label for="fg-menu-toggle" class="fg-burger" aria-label="Menüyü Aç/Kapat">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="fg-navlinks">
+      <li><a href="index.html#about">Hakkımızda</a></li>
+      <li><a href="index.html#services">Hizmetler</a></li>
+      <li><a href="index.html#games">Oyunlar</a></li>
+      <li><a href="mental-health.html">Ruh Sağlığı</a></li>
+      <li><a href="task2.html">Paketler</a></li>
+      <li><a href="team.html">Ekibimiz</a></li>
+      <li><a href="teklif.html">Fiyat Teklifi</a></li>
+      <li><a href="quiz.html" class="fg-active">HR Quiz</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h2>Q-Line HR Assessment</h2>
+        <div class="quiz-info">
+          <span id="currentQuestion">Soru: 0/0</span>
+          <span id="currentScore">Puan: 0</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="quiz-body">
+        <!-- Başlangıç Ekranı -->
+        <div id="startScreen" class="screen active start-screen">
+          <h3>🎯 Online Değerlendirme Sınavı</h3>
+          <p>Q-Line Solutions İnsan Kaynakları departmanı adayları değerlendirmek için hazırladığı bu testi hoş geldiniz.</p>
+          
+          <div class="quiz-rules">
+            <strong>📋 Sınav Kuralları:</strong>
+            <ul>
+              <li>Toplam 10 çoktan seçmeli soru bulunmaktadır</li>
+              <li>Her doğru cevap 10 puan değerindedir</li>
+              <li>Yanlış cevap puan kaybettirmez</li>
+              <li>Her soruyu cevaplayarak ilerleyin</li>
+              <li>Başarı eşiği: 70 puan</li>
+            </ul>
+          </div>
+          
+          <button id="btnStart" class="quiz-btn quiz-btn-primary">
+            Sınavı Başlat
+          </button>
+        </div>
+
+        <!-- Soru Ekranı -->
+        <div id="questionScreen" class="screen question-screen">
+          <h3 id="questionText"></h3>
+          
+          <ul id="optionsList" class="options-list">
+            <!-- Seçenekler JavaScript ile doldurulacak -->
+          </ul>
+          
+          <div class="quiz-controls">
+            <button id="btnNext" class="quiz-btn quiz-btn-primary" disabled>
+              Sonraki Soru
+            </button>
+          </div>
+        </div>
+
+        <!-- Sonuç Ekranı -->
+        <div id="resultScreen" class="screen result-screen">
+          <div class="result-icon" id="resultIcon"></div>
+          <h3 id="resultTitle"></h3>
+          <div class="result-score" id="finalScore">0</div>
+          <p class="result-message" id="resultMessage"></p>
+          
+          <div class="result-details">
+            <div class="result-stat">
+              <span>Toplam Soru:</span>
+              <span id="totalQuestions">0</span>
+            </div>
+            <div class="result-stat">
+              <span>Doğru Cevap:</span>
+              <span id="correctAnswers">0</span>
+            </div>
+            <div class="result-stat">
+              <span>Yanlış Cevap:</span>
+              <span id="wrongAnswers">0</span>
+            </div>
+            <div class="result-stat">
+              <span>Başarı Oranı:</span>
+              <span id="successRate">0%</span>
+            </div>
+          </div>
+          
+          <div class="quiz-controls">
+            <button id="btnRestart" class="quiz-btn quiz-btn-primary">
+              Tekrar Dene
+            </button>
+            <button id="btnHome" class="quiz-btn quiz-btn-secondary">
+              Ana Sayfa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="fg-footer" style="margin-top: 40px;">
+    <p>© 2026 The Fraude Games — Psychological Horror Studio</p>
+    <p class="fg-footer-sub">Developed by <strong>Q-Line Solutions</strong></p>
+  </footer>
+
+  <script>
+    const loadingScreen = document.getElementById('loadingScreen');
+    const loadingGif = document.getElementById('loadingGif');
+    const gifDuration = 3000;
+    function hideLoadingScreen() {
+      if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+        loadingScreen.classList.add('hidden');
+      }
+    }
+    setTimeout(hideLoadingScreen, gifDuration);
+    window.addEventListener('load', function() { setTimeout(hideLoadingScreen, 500); });
+    setTimeout(hideLoadingScreen, 5000);
+    if (loadingGif) { loadingGif.onerror = hideLoadingScreen; }
+  </script>
+  <script src="quiz.js"></script>
+  <!-- Enhanced JavaScript -->
+  <script src="enhanced.js"></script>
+</body>
+</html>
