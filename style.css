@@ -1794,7 +1794,7 @@ html:not([data-theme="dark"]) .fg-orb-2 {
   display: block;
   width: 100vw;
   height: 100vh;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Light theme loading screen - soft pastel */
